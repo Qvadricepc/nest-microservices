@@ -8,13 +8,16 @@
     "test": "nx test jobber-auth",
     "lint": "nx lint jobber-auth",
     "start": "nx serve jobber-auth",
-    "build:prod": "nx build jobber-auth --configuration=production"
+    "build:prod": "nx build jobber-auth --configuration=production",
+    "generate-types": "nx generate-types jobber-auth",
+    "migrate-prisma": "nx migrate-prisma jobber-auth"
   },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
+    "@prisma/client": "^6.16.1",
     "axios": "^1.6.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0"
@@ -44,6 +47,7 @@
     "jest-util": "^30.0.2",
     "nx": "21.5.1",
     "prettier": "^2.6.2",
+    "prisma": "^6.16.1",
     "ts-jest": "^29.4.0",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",

@@ -12,6 +12,7 @@
         "args": ["--node-env=production"],
         "cwd": "apps/jobber-auth"
       },
+      "dependsOn": ["generate-types"],
       "configurations": {
         "development": {
           "args": ["--node-env=development"]
@@ -65,6 +66,21 @@
       "options": {
         "passWithNoTests": true
       }
+    },
+    "generate-types": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "prisma generate",
+        "cwd": "apps/jobber-auth/prisma"
+      }
+    },
+    "migrate-prisma": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "prisma migrate dev",
+        "cwd": "apps/jobber-auth/prisma"
+      }
     }
   }
 }
+
