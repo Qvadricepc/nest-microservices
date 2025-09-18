@@ -1,0 +1,1 @@
+export { AbstractModel } from './lib/graphql/abstract.model';
