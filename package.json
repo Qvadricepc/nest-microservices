@@ -6,6 +6,8 @@
     "build": "nx build jobber-auth",
     "serve": "nx serve jobber-auth",
     "test": "nx test jobber-auth",
+    "test:all": "nx run-many -t test --all",
+    "test:affected": "nx affected -t test",
     "lint": "nx lint jobber-auth",
     "start": "nx serve jobber-auth",
     "build:prod": "nx build jobber-auth --configuration=production",
