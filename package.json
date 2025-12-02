@@ -14,7 +14,8 @@
     "prestart": "cd apps/jobber-auth && npx prisma generate",
     "preserve": "cd apps/jobber-auth && npx prisma generate",
     "prebuild": "cd apps/jobber-auth && npx prisma generate",
-    "postinstall": "cd apps/jobber-auth && npx prisma generate"
+    "postinstall": "cd apps/jobber-auth && npx prisma generate",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +31,8 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",
     "graphql": "^16.11.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0"
   },
